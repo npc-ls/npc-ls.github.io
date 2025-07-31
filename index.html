@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Photo Gallery</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/justifiedGallery.min.css" rel="stylesheet">
+    <link href="css/gallery.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/lightgallery.min.css" /> 
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/js.cookie.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lightgallery-all.min.js"></script>
+    <script src="js/jquery.justifiedGallery.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        if (!Cookies.get('zoomlevel'))
+          Cookies.set('zoomlevel', 2);
+        zoomupd();
+      });
+
+      function zoomupd() {
+        $("#imgdiv").justifiedGallery({
+           rowHeight : 128 * 2,
+           lastRow : 'nojustify',
+           margins : 1
+        }).on('jg.complete', function() {
+           $("#imgdiv").lightGallery({
+              thumbnail: true
+           });
+        });
+      }
+      function zoomin() {
+        if (!Cookies.get('zoomlevel'))
+          Cookies.set('zoomlevel', 2);
+        Cookies.set('zoomlevel', Math.min(Cookies.get('zoomlevel') + 1, 3));
+        zoomupd();
+      }
+      function zoomout() {
+        if (!Cookies.get('zoomlevel'))
+          Cookies.set('zoomlevel', 2);
+        Cookies.set('zoomlevel', Math.max(Cookies.get('zoomlevel') - 1, 1));
+        zoomupd();
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Model Intro</a>
+        </div>
+        <div class="pull-right">
+          <a class="navbar-brand" href="#" onclick="zoomin()"><span class="gallery-zoom">&#xe311;</span></a>
+        </div>
+        <div class="pull-right">
+          <a class="navbar-brand" href="#" onclick="zoomout()"><span class="gallery-zoom">&#xe312;</span></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="gallery-template">
+
+        <h3></h3>
+
+        
+
+        
+        <div class="dir-view row">
+          <div id="imgdiv">
+            <a href="images/4647d16917ae3d4d.jpg"><img src="images/4647d16917ae3d4d.jpg"/></a>
+<a href="images/1824e90be6d1abe9.jpg"><img src="images/1824e90be6d1abe9.jpg"/></a>
+<a href="images/6f84ab53124b758f.jpg"><img src="images/6f84ab53124b758f.jpg"/></a>
+<a href="images/a5dce7c7252e49db.jpg"><img src="images/a5dce7c7252e49db.jpg"/></a>
+<a href="images/a260914c7f32478c.jpg"><img src="images/a260914c7f32478c.jpg"/></a>
+<a href="images/57b24ea0d0a5ef38.jpg"><img src="images/57b24ea0d0a5ef38.jpg"/></a>
+<a href="images/ff19e25a67833820.jpg"><img src="images/ff19e25a67833820.jpg"/></a>
+<a href="images/da34500c884630b0.jpg"><img src="images/da34500c884630b0.jpg"/></a>
+<a href="images/5474a4ffbf3d8a6f.jpg"><img src="images/5474a4ffbf3d8a6f.jpg"/></a>
+<a href="images/c6326283c0e9e64d.jpg"><img src="images/c6326283c0e9e64d.jpg"/></a>
+<a href="images/af813fcb061995f6.jpg"><img src="images/af813fcb061995f6.jpg"/></a>
+<a href="images/b411b697e6079797.jpg"><img src="images/b411b697e6079797.jpg"/></a>
+<a href="images/1b2ddf7205e12bba.jpg"><img src="images/1b2ddf7205e12bba.jpg"/></a>
+<a href="images/a1f618ef32acd0d7.jpg"><img src="images/a1f618ef32acd0d7.jpg"/></a>
+<a href="images/d90647ee8a5f9f47.jpg"><img src="images/d90647ee8a5f9f47.jpg"/></a>
+<a href="images/42b82c0def3ba233.jpg"><img src="images/42b82c0def3ba233.jpg"/></a>
+<a href="images/fde3d4eccfd0ab45.jpg"><img src="images/fde3d4eccfd0ab45.jpg"/></a>
+<a href="images/e2dc2a088abe2e77.jpg"><img src="images/e2dc2a088abe2e77.jpg"/></a>
+<a href="images/8efdc48d87979448.jpg"><img src="images/8efdc48d87979448.jpg"/></a>
+<a href="images/45a8d4e858712cc2.jpg"><img src="images/45a8d4e858712cc2.jpg"/></a>
+<a href="images/2cefd67b7f2bbcab.jpg"><img src="images/2cefd67b7f2bbcab.jpg"/></a>
+<a href="images/28108b65a0b57133.jpg"><img src="images/28108b65a0b57133.jpg"/></a>
+<a href="images/7328fa6dc2095f09.jpg"><img src="images/7328fa6dc2095f09.jpg"/></a>
+<a href="images/c2faee3ed73da83c.jpg"><img src="images/c2faee3ed73da83c.jpg"/></a>
+<a href="images/5330dfa7423899bc.jpg"><img src="images/5330dfa7423899bc.jpg"/></a>
+<a href="images/46389bc10a8d9c48.jpg"><img src="images/46389bc10a8d9c48.jpg"/></a>
+<a href="images/2f6c084aad5ca767.jpg"><img src="images/2f6c084aad5ca767.jpg"/></a>
+<a href="images/670b741465f8586d.jpg"><img src="images/670b741465f8586d.jpg"/></a>
+<a href="images/c2966278b68d7ad2.jpg"><img src="images/c2966278b68d7ad2.jpg"/></a>
+<a href="images/081ef8b4971166f2.jpg"><img src="images/081ef8b4971166f2.jpg"/></a>
+<a href="images/6842cc98adc42fd4.jpg"><img src="images/6842cc98adc42fd4.jpg"/></a>
+<a href="images/2965b0e61b6b6e9f.jpg"><img src="images/2965b0e61b6b6e9f.jpg"/></a>
+<a href="images/ab5a88e57f3c54d8.jpg"><img src="images/ab5a88e57f3c54d8.jpg"/></a>
+<a href="images/665dd5694bb941f5.jpg"><img src="images/665dd5694bb941f5.jpg"/></a>
+<a href="images/fcdf4c64fa539c89.jpg"><img src="images/fcdf4c64fa539c89.jpg"/></a>
+<a href="images/166e96c38ea5ab3d.jpg"><img src="images/166e96c38ea5ab3d.jpg"/></a>
+<a href="images/4d89788696fec7e0.jpg"><img src="images/4d89788696fec7e0.jpg"/></a>
+<a href="images/11c2cad226cc9792.jpg"><img src="images/11c2cad226cc9792.jpg"/></a>
+<a href="images/611de4ac534e954b.jpg"><img src="images/611de4ac534e954b.jpg"/></a>
+<a href="images/0c38cb3505808fa0.jpg"><img src="images/0c38cb3505808fa0.jpg"/></a>
+<a href="images/8f07a34aa5025f21.jpg"><img src="images/8f07a34aa5025f21.jpg"/></a>
+<a href="images/8ab7a8d428d75fc6.jpg"><img src="images/8ab7a8d428d75fc6.jpg"/></a>
+<a href="images/034179857018fba7.jpg"><img src="images/034179857018fba7.jpg"/></a>
+<a href="images/62897da128e36a1e.jpg"><img src="images/62897da128e36a1e.jpg"/></a>
+<a href="images/94cb42c770dac943.jpg"><img src="images/94cb42c770dac943.jpg"/></a>
+<a href="images/66d9be56916b171c.jpg"><img src="images/66d9be56916b171c.jpg"/></a>
+<a href="images/15585107b47b4af6.jpg"><img src="images/15585107b47b4af6.jpg"/></a>
+<a href="images/4630d0aa709bb3ed.jpg"><img src="images/4630d0aa709bb3ed.jpg"/></a>
+<a href="images/b08328c524d3d2d7.jpg"><img src="images/b08328c524d3d2d7.jpg"/></a>
+<a href="images/b4de73b7e62466ff.jpg"><img src="images/b4de73b7e62466ff.jpg"/></a>
+<a href="images/9793d3edaf0899b3.jpg"><img src="images/9793d3edaf0899b3.jpg"/></a>
+<a href="images/0823dddd3cdb2ea4.jpg"><img src="images/0823dddd3cdb2ea4.jpg"/></a>
+<a href="images/d8291b8fbf24f919.jpg"><img src="images/d8291b8fbf24f919.jpg"/></a>
+<a href="images/d07f58b8e9ae9d96.jpg"><img src="images/d07f58b8e9ae9d96.jpg"/></a>
+<a href="images/77dcb11603b37b16.jpg"><img src="images/77dcb11603b37b16.jpg"/></a>
+<a href="images/ceba3dbed85d0176.jpg"><img src="images/ceba3dbed85d0176.jpg"/></a>
+<a href="images/b3d486f77bc32aef.jpg"><img src="images/b3d486f77bc32aef.jpg"/></a>
+<a href="images/df135087a80af15e.jpg"><img src="images/df135087a80af15e.jpg"/></a>
+<a href="images/9ddc9de670cf90a4.jpg"><img src="images/9ddc9de670cf90a4.jpg"/></a>
+<a href="images/29f3d94d9fbc56f8.jpg"><img src="images/29f3d94d9fbc56f8.jpg"/></a>
+<a href="images/1ff656a4bf792aa0.jpg"><img src="images/1ff656a4bf792aa0.jpg"/></a>
+<a href="images/57b3a372e3373076.jpg"><img src="images/57b3a372e3373076.jpg"/></a>
+<a href="images/785c6860bf01b971.jpg"><img src="images/785c6860bf01b971.jpg"/></a>
+<a href="images/685bbe45ab7eecf6.jpg"><img src="images/685bbe45ab7eecf6.jpg"/></a>
+<a href="images/47b7628c65666641.jpg"><img src="images/47b7628c65666641.jpg"/></a>
+<a href="images/41bddc96a860cdde.jpg"><img src="images/41bddc96a860cdde.jpg"/></a>
+<a href="images/67d2710a58a5865e.jpg"><img src="images/67d2710a58a5865e.jpg"/></a>
+<a href="images/aac753d81ad79d65.jpg"><img src="images/aac753d81ad79d65.jpg"/></a>
+<a href="images/bacbaedc260a6043.jpg"><img src="images/bacbaedc260a6043.jpg"/></a>
+<a href="images/a2c66ebb6be3380c.jpg"><img src="images/a2c66ebb6be3380c.jpg"/></a>
+<a href="images/077c230881798258.jpg"><img src="images/077c230881798258.jpg"/></a>
+<a href="images/42d947c1d9e487f5.jpg"><img src="images/42d947c1d9e487f5.jpg"/></a>
+<a href="images/c5b4e1b1948cab69.jpg"><img src="images/c5b4e1b1948cab69.jpg"/></a>
+<a href="images/8e8c048d986ca067.jpg"><img src="images/8e8c048d986ca067.jpg"/></a>
+<a href="images/64b390ac9b8315c2.jpg"><img src="images/64b390ac9b8315c2.jpg"/></a>
+<a href="images/cdbfe6c28b435ef1.jpg"><img src="images/cdbfe6c28b435ef1.jpg"/></a>
+<a href="images/12731a2b306446db.jpg"><img src="images/12731a2b306446db.jpg"/></a>
+<a href="images/aeaa10ca8eae6281.jpg"><img src="images/aeaa10ca8eae6281.jpg"/></a>
+<a href="images/7dc41367c45edffa.jpg"><img src="images/7dc41367c45edffa.jpg"/></a>
+<a href="images/30d1a1adcf26745b.jpg"><img src="images/30d1a1adcf26745b.jpg"/></a>
+<a href="images/29ff1f0bdb20ed00.jpg"><img src="images/29ff1f0bdb20ed00.jpg"/></a>
+<a href="images/5ec36530987094e2.jpg"><img src="images/5ec36530987094e2.jpg"/></a>
+<a href="images/ad5d076524925e2d.jpg"><img src="images/ad5d076524925e2d.jpg"/></a>
+<a href="images/f1744fb3955a5861.jpg"><img src="images/f1744fb3955a5861.jpg"/></a>
+<a href="images/99c849d97e36230c.jpg"><img src="images/99c849d97e36230c.jpg"/></a>
+<a href="images/7687ec7fb1bbf6bf.jpg"><img src="images/7687ec7fb1bbf6bf.jpg"/></a>
+<a href="images/eb25e3089c56a6d4.jpg"><img src="images/eb25e3089c56a6d4.jpg"/></a>
+<a href="images/ba5a495ca71200cc.jpg"><img src="images/ba5a495ca71200cc.jpg"/></a>
+<a href="images/0f802ff57d845b11.jpg"><img src="images/0f802ff57d845b11.jpg"/></a>
+<a href="images/c264f5d26bc5d0a7.jpg"><img src="images/c264f5d26bc5d0a7.jpg"/></a>
+<a href="images/904bdaca99b3ca4c.jpg"><img src="images/904bdaca99b3ca4c.jpg"/></a>
+<a href="images/7d17e8edcad510fb.jpg"><img src="images/7d17e8edcad510fb.jpg"/></a>
+<a href="images/6fffd92117d63e4c.jpg"><img src="images/6fffd92117d63e4c.jpg"/></a>
+<a href="images/1036fa1f3a44d798.jpg"><img src="images/1036fa1f3a44d798.jpg"/></a>
+<a href="images/838efccbc13d980d.jpg"><img src="images/838efccbc13d980d.jpg"/></a>
+<a href="images/368fb462d2a1cc11.jpg"><img src="images/368fb462d2a1cc11.jpg"/></a>
+<a href="images/9ff8e9095cf3b3b5.jpg"><img src="images/9ff8e9095cf3b3b5.jpg"/></a>
+<a href="images/0ca05d73ffb9c0f2.jpg"><img src="images/0ca05d73ffb9c0f2.jpg"/></a>
+<a href="images/e093c58f6a300623.jpg"><img src="images/e093c58f6a300623.jpg"/></a>
+<a href="images/c18d2fe648fb6a3a.jpg"><img src="images/c18d2fe648fb6a3a.jpg"/></a>
+<a href="images/08580f37a9490fb8.jpg"><img src="images/08580f37a9490fb8.jpg"/></a>
+<a href="images/e1ffab7bb1516307.jpg"><img src="images/e1ffab7bb1516307.jpg"/></a>
+<a href="images/e0ab2c7ec89a22ae.jpg"><img src="images/e0ab2c7ec89a22ae.jpg"/></a>
+<a href="images/40f1dbfcd90ccf65.jpg"><img src="images/40f1dbfcd90ccf65.jpg"/></a>
+<a href="images/1fd34652961a1997.jpg"><img src="images/1fd34652961a1997.jpg"/></a>
+<a href="images/5917238c9baf7b10.jpg"><img src="images/5917238c9baf7b10.jpg"/></a>
+<a href="images/fda6e7cdf65e9cd4.jpg"><img src="images/fda6e7cdf65e9cd4.jpg"/></a>
+<a href="images/0cf75f11e187ca90.jpg"><img src="images/0cf75f11e187ca90.jpg"/></a>
+<a href="images/ca0bc7c63eff1cad.jpg"><img src="images/ca0bc7c63eff1cad.jpg"/></a>
+<a href="images/db021c2ab3c23dc3.jpg"><img src="images/db021c2ab3c23dc3.jpg"/></a>
+<a href="images/2277c49d29c13352.jpg"><img src="images/2277c49d29c13352.jpg"/></a>
+<a href="images/e247e48bcacf3605.jpg"><img src="images/e247e48bcacf3605.jpg"/></a>
+<a href="images/460fb1c9d3926810.jpg"><img src="images/460fb1c9d3926810.jpg"/></a>
+<a href="images/6f87ed602c775d20.jpg"><img src="images/6f87ed602c775d20.jpg"/></a>
+<a href="images/8e1f01dbc92c6bf3.jpg"><img src="images/8e1f01dbc92c6bf3.jpg"/></a>
+<a href="images/3beaed5189940b98.jpg"><img src="images/3beaed5189940b98.jpg"/></a>
+<a href="images/1cf9c1101bd0cd97.jpg"><img src="images/1cf9c1101bd0cd97.jpg"/></a>
+<a href="images/156543f4343f184d.jpg"><img src="images/156543f4343f184d.jpg"/></a>
+<a href="images/2d44e6aa53ebc25b.jpg"><img src="images/2d44e6aa53ebc25b.jpg"/></a>
+<a href="images/b3db2a3de45cbb36.jpg"><img src="images/b3db2a3de45cbb36.jpg"/></a>
+<a href="images/e2b2907a6335332a.jpg"><img src="images/e2b2907a6335332a.jpg"/></a>
+<a href="images/e057ded71325b9ee.jpg"><img src="images/e057ded71325b9ee.jpg"/></a>
+<a href="images/703132f8338ec091.jpg"><img src="images/703132f8338ec091.jpg"/></a>
+<a href="images/301053f52a534f62.jpg"><img src="images/301053f52a534f62.jpg"/></a>
+<a href="images/9de1cd1c80689a03.jpg"><img src="images/9de1cd1c80689a03.jpg"/></a>
+<a href="images/d0951314f3721d44.jpg"><img src="images/d0951314f3721d44.jpg"/></a>
+<a href="images/d7d42cd1726830b6.jpg"><img src="images/d7d42cd1726830b6.jpg"/></a>
+<a href="images/09096450fb198b46.jpg"><img src="images/09096450fb198b46.jpg"/></a>
+<a href="images/c6977984223923c8.jpg"><img src="images/c6977984223923c8.jpg"/></a>
+<a href="images/ffdd45680a8d9807.jpg"><img src="images/ffdd45680a8d9807.jpg"/></a>
+<a href="images/a0dc8ca1da69ee3c.jpg"><img src="images/a0dc8ca1da69ee3c.jpg"/></a>
+<a href="images/436758bd889ce188.jpg"><img src="images/436758bd889ce188.jpg"/></a>
+<a href="images/6fcca48deb8e437b.jpg"><img src="images/6fcca48deb8e437b.jpg"/></a>
+<a href="images/47f0e992bacb427b.jpg"><img src="images/47f0e992bacb427b.jpg"/></a>
+<a href="images/3244ae68b15494dc.jpg"><img src="images/3244ae68b15494dc.jpg"/></a>
+<a href="images/d8e55cc384eae815.jpg"><img src="images/d8e55cc384eae815.jpg"/></a>
+<a href="images/4557e8a3e160ddac.jpg"><img src="images/4557e8a3e160ddac.jpg"/></a>
+<a href="images/5f47412aeff8e76c.jpg"><img src="images/5f47412aeff8e76c.jpg"/></a>
+<a href="images/2eb1a08acc020ba8.jpg"><img src="images/2eb1a08acc020ba8.jpg"/></a>
+<a href="images/f2502c80d66accba.jpg"><img src="images/f2502c80d66accba.jpg"/></a>
+          </div>
+        </div>
+        
+
+      </div>
+
+    </div><!-- /.container -->
+
+  </body>
+</html>
+
